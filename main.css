@@ -1,0 +1,467 @@
+body
+{
+    background-image: url(img/background1.png);
+}
+
+.grid-container
+    {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 100px 1fr;
+        grid-template-rows: 100px 1fr 60px;
+        grid-template-areas:
+        "header header"
+        "nav2 content1"
+        "footer footer";
+        gap: 5px;
+        font-family: 'Roboto', sans-serif;
+    }
+    a
+    {
+        text-decoration: none;
+        color: green;
+    }
+.header
+    {
+        grid-area: header;
+        font-size: 35px;
+        text-align: center;
+        padding-top: 30px;
+        font-weight: bold;
+    }
+.header h1
+    {
+        font-size: 15px;
+        background: rgba(80, 146, 80, 0.4);
+        color: white;
+        padding: 10px 0px;
+    }
+.nav1
+    {
+        display: none;
+    }
+.nav2
+    {
+        grid-area: nav2;
+        display: grid;
+        grid-template-rows: 40px 60px 40px 40px;
+        padding-top: 80px;
+        padding-left: 10px;
+    }
+.nav2 a
+    {
+        color: black;
+        font-size: 20px;
+        text-decoration: none;
+    }
+.nav2 ul
+    {
+        display: none;
+    }
+
+.tytul
+    {
+        text-align: center;
+        font-size: 20px;
+        padding: 10px 0px;
+        background: rgba(80, 146, 80, 0.4);
+        border-radius: 50% 0% 0% 50%;
+    }
+
+.content1
+    {
+        grid-area: content1;
+    }
+.opis
+    {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 350px 1fr;
+        justify-items: center;
+        align-items: center;
+    }
+.opis p
+    {
+        font-size: 12px;
+        padding: 10px;
+        background: rgba(80, 146, 80, 0.4);
+    }
+.opis2 img
+    {
+        width: 200px;
+    }
+.footer
+    {
+        grid-area: footer;
+        text-align: center;
+    }
+.footer p
+    {
+        background: rgba(80, 146, 80, 0.4);
+        margin-top: 10px;
+        font-size: 13px;
+    }
+        /*  Nasza plantacja   */
+
+.grid1
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 100px);
+        justify-content: center;
+        align-content: center;
+        font-size: 10px;
+        padding-top: 20px;
+        gap: 20px 10px;
+    }
+.item-nasz img
+    {
+        width: 100px;
+        height: 100px;
+        border-radius: 20%;
+    }
+
+    /*      Galeria       */
+
+
+.galeria
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 100px);
+        grid-template-rows: repeat(2, 100px);
+        justify-content: center;
+        align-content: center;
+        padding-top: 10px;
+        gap: 2px;
+    }
+.item1 img
+    {
+        width: 100px;
+        height: 100px;
+    }
+
+        /*      Kontakt       */
+iframe
+    {
+        width: 0px;
+        height: 0px;
+    }
+    .tekst
+    {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        left: 40px;
+        top: 100px;
+        font-size: 15px;
+    }
+.fa-mobile-alt
+{
+    padding-left: 8px;
+}
+
+/*          kazdy osobno         */
+
+.drzewo
+    {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px 100px 170px;
+        gap: 10px;
+        padding: 50px 20px;
+        font-size: 11px;
+    }
+.drzewo img
+    {
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        border-radius: 10%;
+    }
+.zdjecie
+    {
+        display: none;
+    }
+
+/*              media         */
+
+@media (min-width: 768px)
+{
+       /* O nas */
+    .header h1
+    {
+        font-size: 25px;
+    }
+    .opis
+    {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 250px 1fr;
+        justify-items: center;
+        align-items: center;
+    }
+    .opis p
+    {
+        padding: 20px 50px;
+        font-size: 15px;
+    }
+    .opis img
+    {
+        width: 400px;
+    }
+    .footer p
+    {
+        padding: 10px;
+        font-size: 18px;
+    }
+       /* Nasza plantacja */
+    .item p
+    {
+        font-size: 17px;
+    }
+     /*         galeria      */
+     .galeria
+    {
+        display: grid;
+        grid-template-columns: repeat(4, 150px);
+        grid-template-rows: repeat(2, 150px);
+        justify-content: center;
+        align-content: center;
+        gap: 5px;
+        padding: 12px;
+    }
+    .galeria img
+    {
+        width: 150px;
+        height: 150px;
+    }
+     /*         kontakt      */
+     iframe
+    {
+        position: relative;
+        top: 120px;
+        left: 330px;
+        width: 300px;
+        height: 300px;
+    }
+    .tekst
+    {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        left: 50px;
+        top: -140px;
+        font-size: 18px;
+    }
+}
+@media (min-width: 1024px)
+{
+    .grid-container
+{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 70px 35px 1fr 50px;
+    grid-template-areas:
+        "header header"
+        "nav1 nav1"
+        "nav2 content1"
+        "footer footer";
+}
+.nav1
+{
+    grid-area: nav1;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    justify-self: end;
+    padding-top: 5px;
+}
+        /*              kontakt              */
+.grid1
+    {
+        display: grid;
+        grid-template-columns: repeat(4, 150px);
+        grid-template-rows: repeat(2, 150px);
+        justify-content: center;
+        align-content: center;
+        gap: 20px;
+        padding-top: 60px;
+    }
+.grid1 img
+    {
+        width: 150px;
+        height: 150px;
+    }
+.grid1 p
+    {
+        font-size: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*.nav1 a
+{
+    margin: 18px;
+    color: black;
+    text-decoration: none;
+}
+.nav2
+{
+    grid-area: nav2;
+    display: grid;
+    grid-template-rows: 40px 40px 140px 40px;
+    padding-top: 50px;
+    padding-left: 20px;
+}
+.nav2 a
+{
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+}
+.nav2 ul
+{
+    list-style-type: square;
+    padding-left: 30px;
+}
+.nav2 li
+{
+    padding-top: 10px;
+}
+.opis2 img
+{
+    width: 500px;
+    border-radius: 3%;
+}
+.opis
+    {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 400px 1fr;
+        justify-items: center;
+        align-items: center;
+    }
+.opis p
+{
+    padding: 75px;
+    font-size: 27px;
+}
+.tytul
+{
+    font-size: 40px;
+}
+.grid1
+{
+    display: grid;
+    height: 600px;
+    grid-template-columns: repeat(4,250px);
+    grid-template-rows: 250px 250px;
+    justify-content: center;
+    align-content: center;
+    column-gap: 30px;
+    row-gap: 20px;
+    font-size: 20px;
+}
+.grid1 img
+{
+    width: 250px;
+    height: 250px;
+}
+.wiecej
+{
+    position: relative;
+    float: right;
+    margin-top: 50px;
+    padding: 15px;
+    font-size: 17px;
+    border: 1px solid green;
+}
+.wiecej:hover
+{
+    background-color: green;
+}
+iframe
+{
+    float: right;
+}
+.tekst
+{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    left: 240px;
+    top: 150px;
+    font-size: 25px;
+}
+.tekst a
+{
+    color: black;
+    padding-left: 10px;
+}
+.fa-mobile-alt
+{
+    padding-left: 10px;
+}
+.drzewo
+{
+    display: grid;
+    grid-template-columns: 400px 500px;
+    grid-template-rows: 90px 210px 200px;
+    justify-content: center;
+    align-content: center;
+    gap: 20px 50px;
+    grid-auto-flow: column;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    padding-top: 20px;
+    font-size: 20px;
+}
+.drzewo p
+{
+    padding-top: 9px;
+}
+.zdjecie
+{
+    grid-row-start: 1;
+    grid-row-end: 4;
+    width: 160px;
+    height: 500px;
+}
+.galeria
+{
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(3, 200px);
+    justify-content: center;
+    align-content: center;
+    padding-top: 20px;
+    gap: 10px;
+}
+.item1 img
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 5%;
+}
+.footer
+{
+    grid-area: footer;
+    text-align: center;
+}
+
