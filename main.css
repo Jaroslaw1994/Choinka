@@ -79,6 +79,7 @@ body
         grid-template-rows: 350px 1fr;
         justify-items: center;
         align-items: center;
+        padding-top: 20px;
     }
 .opis p
     {
@@ -342,7 +343,7 @@ iframe
     }
 .opis p
     {
-        font-size: 15px;
+        font-size: 17px;
     }
 .opis img
     {
@@ -402,11 +403,11 @@ iframe
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
-    padding: 140px 10px 0px 40px;
+    padding: 100px 10px 0px 40px;
 }
 .opis p
     {
-        font-size: 25px;
+        font-size: 23px;
     }
 .opis img
     {
